@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOVE Q/A</title>
+    <style>
+      body {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url(pexels-pixabay-326612.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      input {
+        margin-bottom: 10px;
+      }
+      #ppp {
+        display: block;
+        padding: 0px 37%;
+        border-radius: 5px;
+        font-size: 30px;
+        background-color: lightcoral;
+        box-shadow: 1px 2px 3px 2px;
+        outline: none;
+        color: red;
+      }
+      #ppp:hover {
+        color: greenyellow;
+      }
+      .container {
+        background: linear-gradient(to bottom, #ff9a9e, #fecfef, #f9b4ed);
+        padding-left: 10px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        height: 50vh;
+        width: 20%;
+      }
+      #dis {
+        margin-top: 40px;
+      }
+      input {
+        display: block;
+        border-radius: 5px;
+        font-size: 30px;
+        width: 94%;
+        background-color: lightgrey;
+        box-shadow: 1px 1px 1px 1px;
+        outline: none;
+      }
+      @media only screen and (max-width: 760px) {
+        .container {
+          background-image: url(Screenshot\ 2025-01-14\ 125130.png);
+          background-size: cover;
+          background-repeat: no-repeat;
+          padding-left: 5px;
+          border-radius: 5px;
+          height: 50vh;
+          width: 80%;
+        }
+        body {
+          background-image: url(Screenshot\ 2025-01-14\ 125130.png);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1
+        style="
+          margin-left: 25%;
+          color: rgb(4, 4, 4);
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+            Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+            sans-serif;
+        "
+      >
+        login page
+      </h1>
+      <input type="text" id="dis" placeholder="user_id" /><br />
+
+      <input
+        id="display"
+        type="password"
+        maxlength="6"
+        placeholder="password"
+      /><br />
+
+      <button id="ppp" onclick="result()">login</button>
+      <script>
+        function result() {
+          let password = document.getElementById("display").value;
+          let name = document.getElementById("dis").value;
+          let z = "011105";
+          let p = "pranjal_uk08";
+          if (password === z && p === name) {
+            window.location.href = "quiz.html";
+          } else {
+            alert("koi nahi yaad karke dal lo 💖");
+            document.getElementById("display").value = "";
+            document.getElementById("dis").value = "";
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>
